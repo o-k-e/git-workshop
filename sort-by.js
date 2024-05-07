@@ -55,11 +55,18 @@ const dogs = [
 function main(sortBy) {
     console.log('sortBy:', sortBy)
 
-    const sorted = dogs 
+    if (sortBy === 'name') {
+      const sorted = dogs 
     .sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
     console.log(sorted);
+    }
+    if (sortBy === 'age') {
+      dogs.sort((a,b)=> a.age -b.age)
+      console.log(dogs)
+    }
+    
 
 }
 
