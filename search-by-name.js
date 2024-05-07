@@ -13,7 +13,14 @@ const catNames = ['Cirmi', 'Cirmos', 'Vakarcs', 'Butyok', 'Bubu']
 
 function main(keyword) {
     console.log('keyword:', keyword)
+    const searchResult = []
     // Tip: string.prototype.includes()
+    for(const pet of catNames){
+        if(pet.includes(keyword)){
+            searchResult.push(pet)
+        }
+    }
+    console.log(searchResult)
 }
 
 main(process.argv[2])
